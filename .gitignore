@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+venv
+.idea
+docs/.ipynb_checkpoints/
+db.sqlite3
+Presentation.key
