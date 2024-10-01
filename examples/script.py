@@ -2,7 +2,7 @@
 
 print("hello world")
 
-x = -10
+x = -14
 print(x)
 
 # explicit line joining
@@ -23,3 +23,13 @@ if x > 0:
     print("still inside if")
 
 print("outside if")
+
+code_block = """total_minutes = 100
+hours = total_minutes // 60
+minutes = total_minutes % 60
+print("Exercise 2")
+print(hours, minutes)"""
+print(code_block)
+
+string_with_special_chars = "\n\t\"\'\\"
+print(string_with_special_chars)
