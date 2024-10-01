@@ -1,4 +1,5 @@
-"""This is a docstring"""
+"""This is a docstring
+Spread on multiple lines"""
 
 print("hello world")
 
