@@ -60,3 +60,18 @@ varargs(10, 20, 30, name='Anna', age=20)
 # Out[605]: 'Ana is 1 years old. Ana is a baby.'
 # '{name} is {age} years old. {name} is a baby.'.format(name=name, age=age)
 # Out[606]: 'Andrei is 0 years old. Andrei is a baby.'
+
+
+# Duck typing
+def concatenate(*args):
+    if not args:
+        return
+    result = args[0]
+    for arg in args[1:]:
+        result += arg
+    return result
+
+
+print(concatenate(1, 2, 3, 7, 12, 5))
+print(concatenate('hello', ' ', 'world', '!'))
+print(concatenate([3, 6, 7], [8, 3, 2]))
