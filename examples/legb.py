@@ -34,8 +34,11 @@ class MyClass:
 # sum = 0  # shadowing
 # print(sum)  # sum is global if defined above, built-in otherwise
 
-my_func(1)
 
-print("-- Global --")
-print("Global names:", X, my_func, MyClass, global_lst)
-print("Built-in names:", int, None, len, NameError)
+# print(__name__)
+if __name__ == "__main__":
+    my_func(1)
+
+    print("-- Global --")
+    print("Global names:", X, my_func, MyClass, global_lst)
+    print("Built-in names:", int, None, len, NameError)
