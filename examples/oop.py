@@ -1,4 +1,5 @@
 from datetime import date
+import random
 
 
 class Person:
@@ -54,6 +55,22 @@ class Person:
         return self
 
 
+class Student(Person):
+    count = 0
+
+    def __init__(self, name, university, date_of_birth):
+        super().__init__(name, date_of_birth)
+        self.university = university
+
+    def greet(self, greeting="hi"):
+        print(f"{greeting.capitalize()}! My name is {self.name} and I study at "
+              f"{self.university}")
+
+    def get_grade(self, subject):
+        return random.randint(2, 10)
+
+
+
 if __name__ == "__main__":
     p1 = Person("Anna", date(1973, 5, 2))
     p2 = Person("Jane", date(2001, 6, 12))
@@ -83,3 +100,10 @@ if __name__ == "__main__":
     except ValueError as ex:
         print(ex)
     # del p1.date_of_birth  # delete
+
+    s1 = Student("Mike Addams", "MIT", date(2005, 9, 20))
+    print(s1.age, s1.name, s1.university)
+    s1.greet()
+    print(s1.get_grade("Math"))
+
+    print(Person.count, Student.count)
