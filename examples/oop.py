@@ -70,7 +70,6 @@ class Student(Person):
         return random.randint(2, 10)
 
 
-
 if __name__ == "__main__":
     p1 = Person("Anna", date(1973, 5, 2))
     p2 = Person("Jane", date(2001, 6, 12))
@@ -80,7 +79,7 @@ if __name__ == "__main__":
 
     p1.greet('good morning')
     p2.greet()
-
+    breakpoint()
     # Person.greet(p1, 'good morning')
     # Person.greet(p2)
 
